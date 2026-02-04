@@ -58,7 +58,7 @@ function startCountdown(el) {
       el.innerHTML = "I Love You So Much, Chomchom 💖";
 
       if (sound) {
-        sound.volume = 0.4;
+        sound.volume = 0.5;
         sound.play().catch(() => {});
       }
     }
@@ -71,43 +71,31 @@ function startCountdown(el) {
 /* 🎵 BACKGROUND MUSIC       */
 /* ========================= */
 
-const music = document.getElementById("bgMusic");
+const bgMusic = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
 
-if (music && musicBtn) {
-  musicBtn.onclick = () => {
-    if (music.paused) {
-      music.play();
+if (bgMusic && musicBtn) {
+  bgMusic.volume = 0.3;
+
+  // restore previous state
+  if (localStorage.getItem("music") === "on") {
+    bgMusic.play().catch(() => {});
+    musicBtn.textContent = "🔈";
+  }
+
+  musicBtn.addEventListener("click", () => {
+    if (bgMusic.paused) {
+      bgMusic.play().catch(() => {});
+      localStorage.setItem("music", "on");
       musicBtn.textContent = "🔈";
     } else {
-      music.pause();
+      bgMusic.pause();
+      localStorage.setItem("music", "off");
       musicBtn.textContent = "🔊";
-    }function startCountdown(el) {
-  let c = 3;
-  el.textContent = c;
-
-  const sound = document.getElementById("surpriseSound");
-
-  const timer = setInterval(() => {
-    c--;
-    el.textContent = c;
-
-    if (c === 0) {
-      clearInterval(timer);
-
-      el.innerHTML = "I Love You So Much, Chomchom 💖";
-
-      // play soft sound
-      if (sound) {
-        sound.volume = 0.4; // soft volume
-        sound.play();
-      }
     }
-  }, 1000);
+  });
 }
 
-  };
-}
 
 /* ========================= */
 /* ⏰ CLOCK (HOME PAGE ONLY) */
