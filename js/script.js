@@ -44,18 +44,7 @@ function typeLetter(el, text, speed = 45) {
 /* 🎉 COUNTDOWN (FINAL PAGE) */
 /* ========================= */
 
-function startCountdown(el) {
-  let c = 3;
-  el.textContent = c;
-  const timer = setInterval(() => {
-    c--;
-    el.textContent = c;
-    if (c === 0) {
-      clearInterval(timer);
-      el.innerHTML = "I Love You So Much, Chomchom 💖";
-    }
-  }, 1000);
-}
+
 
 /* ========================= */
 /* 🎵 BACKGROUND MUSIC       */
@@ -72,7 +61,30 @@ if (music && musicBtn) {
     } else {
       music.pause();
       musicBtn.textContent = "🔊";
+    }function startCountdown(el) {
+  let c = 3;
+  el.textContent = c;
+
+  const sound = document.getElementById("surpriseSound");
+
+  const timer = setInterval(() => {
+    c--;
+    el.textContent = c;
+
+    if (c === 0) {
+      clearInterval(timer);
+
+      el.innerHTML = "I Love You So Much, Chomchom 💖";
+
+      // play soft sound
+      if (sound) {
+        sound.volume = 0.4; // soft volume
+        sound.play();
+      }
     }
+  }, 1000);
+}
+
   };
 }
 
