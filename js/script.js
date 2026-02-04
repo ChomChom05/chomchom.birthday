@@ -55,7 +55,7 @@ function startCountdown(el) {
 
     if (c === 0) {
       clearInterval(timer);
-      el.innerHTML = "I Love You So Much, Chomchom 💖";
+      el.innerHTML = "ChomChom Don't Forget You Are The Best 😊I Love You So Much, Chomchom 😙💖";
 
       if (sound) {
         sound.volume = 0.5;
