@@ -147,4 +147,29 @@ p {
   display: block;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+/* ========================= */
+/* 🏠 HOME PAGE IMPROVEMENTS */
+/* ========================= */
+
+.home-center {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bigger title */
+.home-center h1 {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+/* Bigger paragraph */
+.home-center p {
+  font-size: 1.15rem;
+  text-align: center;
+  max-width: 380px;
+}
+
 
