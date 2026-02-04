@@ -137,3 +137,14 @@ p {
   font-size: 0.95rem;
   opacity: 0.85;
 }
+/* ===== STORY PAGE IMAGES ===== */
+
+.story-img {
+  width: 100%;
+  max-width: 340px;
+  margin: 18px auto;
+  border-radius: 18px;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
