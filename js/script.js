@@ -43,6 +43,27 @@ function typeLetter(el, text, speed = 45) {
 /* ========================= */
 /* 🎉 COUNTDOWN (FINAL PAGE) */
 /* ========================= */
+function startCountdown(el) {
+  let c = 3;
+  el.textContent = c;
+
+  const sound = document.getElementById("surpriseSound");
+
+  const timer = setInterval(() => {
+    c--;
+    el.textContent = c;
+
+    if (c === 0) {
+      clearInterval(timer);
+      el.innerHTML = "I Love You So Much, Chomchom 💖";
+
+      if (sound) {
+        sound.volume = 0.4;
+        sound.play().catch(() => {});
+      }
+    }
+  }, 1000);
+}
 
 
 
