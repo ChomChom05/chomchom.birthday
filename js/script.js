@@ -129,3 +129,17 @@ if (secondHand && clockWrapper && mainContent) {
     }
   }, 1000);
 }
+const commentToggle = document.getElementById("commentToggle");
+const commentBox = document.getElementById("commentBox");
+
+if (commentToggle && commentBox) {
+  commentToggle.addEventListener("click", () => {
+    if (commentBox.style.display === "block") {
+      commentBox.style.display = "none";
+      commentToggle.innerHTML = "Madamji, Please share your thoughts 💌 ⬇️";
+    } else {
+      commentBox.style.display = "block";
+      commentToggle.innerHTML = "Thank you for sharing 🤍 ⬆️";
+    }
+  });
+}
