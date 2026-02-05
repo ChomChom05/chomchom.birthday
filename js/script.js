@@ -56,6 +56,10 @@ function startCountdown(el) {
     if (c === 0) {
       clearInterval(timer);
       el.innerHTML = "ChomChom Don't Forget You Are The Best😊...I Love You So Much, Chomchom 😙💖";
+      const images = document.getElementById("surpriseImages");
+if (images) {
+  images.style.display = "flex";
+}
 
       if (sound) {
         sound.volume = 0.5;
