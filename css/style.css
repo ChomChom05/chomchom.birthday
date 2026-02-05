@@ -213,4 +213,23 @@ p {
   resize: none;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+/* ========================= */
+/* 🖼️ SURPRISE IMAGES STYLE */
+/* ========================= */
+
+.surprise-images {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* important for mobile */
+}
+
+.surprise-images img {
+  width: 48%;
+  max-width: 180px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
 
